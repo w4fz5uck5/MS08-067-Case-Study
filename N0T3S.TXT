@@ -2,6 +2,8 @@ Materials:
 https://vulners.com/myhack58/MYHACK58:62200921875
 https://labs.mwrinfosecurity.com/assets/BlogFiles/hello-ms08-067-my-old-friend.pdf
 https://github.com/SecureAuthCorp/impacket/tree/master/impacket/dcerpc/v5
+http://www.tiagoalexandre.com/security/exploit%20development/2017/09/08/MS08-067
+http://pubs.opengroup.org/onlinepubs/9629399/chap14.htm
 
 Windows network services internals:
 https://l.wzm.me/_security/internet/_internet/WinServices/ch04s07s08.html 
