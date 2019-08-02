@@ -1,0 +1,23 @@
+Materials:
+https://vulners.com/myhack58/MYHACK58:62200921875
+https://labs.mwrinfosecurity.com/assets/BlogFiles/hello-ms08-067-my-old-friend.pdf
+https://github.com/SecureAuthCorp/impacket/tree/master/impacket/dcerpc/v5
+
+Windows network services internals:
+https://l.wzm.me/_security/internet/_internet/WinServices/ch04s07s08.html 
+NetprPathCanonicalize:
+    UUID ((4b324fc8-1670-01d3-1278-5a47bf6ee188), '3.0') # srvsvc
+    Operation number (0x1f) 
+    |
+    '-> dce.call(0x1f, stub)
+
+Vulnerable DCERPC Function:
+ NET_API_STATUS NetprPathCanonicalize(
+   [in, string, unique] SRVSVC_HANDLE ServerName,
+   [in, string] WCHAR* PathName,
+   [out, size_is(OutbufLen)] unsigned char* Outbuf,
+   [in, range(0,64000)] DWORD OutbufLen,
+   [in, string] WCHAR* Prefix,
+   [in, out] DWORD* PathType,
+   [in] DWORD Flags
+ );
