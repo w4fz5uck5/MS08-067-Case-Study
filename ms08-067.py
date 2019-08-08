@@ -82,8 +82,8 @@ def stub():
 
 	# Failed to get VAD root
 	# PROCESS 82140780  SessionId: 0  Cid: 03f0 Peb: 7ffdd000  ParentCid: 03f8
-    # DirBase: 088802a0  ObjectTable: e1fadc38  HandleCount:  27.
-    # Image: calc.exe 
+        # DirBase: 088802a0  ObjectTable: e1fadc38  HandleCount:  27.
+        # Image: calc.exe 
 	shellcode = (
 		"\xd9\xcb\xbe\xb9\x23\x67\x31\xd9\x74\x24\xf4\x5a\x29\xc9"
 		"\xb1\x13\x31\x72\x19\x83\xc2\x04\x03\x72\x15\x5b\xd6\x56"
